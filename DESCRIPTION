@@ -1,11 +1,11 @@
 Package: lfanalyse
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Statistical Low Flow Analysis
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Mai-Britt Berghöfer
+Maintainer: Mai-Britt Berghöfer <berghoefer@uni-potsdam.de>
+Description: R-Package to analyse discharge data. To get startet "lfanalyse" offers fucntions to load and structure the GRDC-Dataset. For the analysis package contains functions for a descriptive overview, a threshold based analysis as well as a low flow trend analysis.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.1
