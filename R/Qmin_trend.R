@@ -12,6 +12,7 @@
 #' \dontrun{ Qmin_trend(data, "COCHEM")}
 #'
 Qmin_trend=function(data, station, mod=1) {
+  library(ggplot2)
   min_trend=function(data, station, mod= 1) {
 
 
@@ -81,7 +82,7 @@ Qmin_trend=function(data, station, mod=1) {
 
 
 
-  nbr=which(names(data)==station)
+ nbr=which(names(data)==station)
   val=data[[nbr]]
   abs_min=min(data[[nbr]][,2])
 
@@ -93,7 +94,7 @@ Qmin_trend=function(data, station, mod=1) {
   q_min=rep(0, l)
   for ( i in 1:l){
     year=as.character(years[i])
-    j=grep(year, data[[nbr]][,1])
+  j=grep(year, data[[nbr]][,1])
     Val=data[[nbr]][,2][j]
     q_min[i]=min(Val)
   }
@@ -103,7 +104,7 @@ Qmin_trend=function(data, station, mod=1) {
 
   if(mod==1){
     titl=paste("Yuepilon and Linear Trend of Minimum Values at",station)
-    cap=paste("Absolute Minimum is: ", round(abs_min,3), '[m^3/s], slope: Trend- Sens Sloap:',round(model$slope_zyp,3),"slope: Trend- Least Squares:", round(model$slope_lm,3))
+    cap=paste('Slope: Trend- Sens Sloap:',round(model$slope_zyp,3),"Kendall's P-Value:", round(model$sig_zyp, 3),"Slope: Trend- Least Squares:", round(model$slope_lm,3))
     plot=ggplot(results)+geom_line(mapping=aes(x=years,y=q_min, group=1, col="a"), show.legend  =TRUE)+labs(title=titl, subtitle=paste("from", year_one, "to", last_year), x="Years" ,  y=expression('Minimum Discharge Value [m'^3*'/s]'), caption=cap)+
       geom_abline(aes(intercept = model$intercept_zyp, slope= model$slope_zyp,  col="b"), show.legend=TRUE)+
       geom_abline(aes(intercept= model$intercept_lm, slope=model$slope_lm,col="c"), show.legend=TRUE)+  scale_color_manual(name = "Legend:   ",
@@ -113,7 +114,7 @@ Qmin_trend=function(data, station, mod=1) {
   }else if (mod==2){
 
     titl=paste("Yuepilon  Trend of Minimum Values at",station)
-    cap=paste("Absolute Minimum is: ", round(abs_min,3), '[m^3/s], slope: Trend- Sens Sloap:',round(model$slope_zyp,3))
+    cap=paste('Slope: Trend- Sens Sloap:',round(model$slope_zyp,3), "Kendall's P-Value:", round(model$sig_zyp, 3))
     plot=ggplot(results)+geom_line(mapping=aes(x=years,y=q_min, group=1, col="a"), show.legend  =TRUE)+labs(title=titl, subtitle=paste("from", year_one, "to", last_year), x="Years" , y=expression('Minimum Discharge Value [m'^3*'/s]'), caption=cap)+
       geom_abline(aes(intercept = model$intercept_zyp, slope= model$slope_zyp,  col="b"), show.legend=TRUE)+
       scale_color_manual(name = "Legend:   ",
@@ -122,7 +123,7 @@ Qmin_trend=function(data, station, mod=1) {
   }else if(mod==3){
 
     titl=paste("Linear Trend of Minimum Values at",station)
-    cap=paste("Absolute Minimum is: ", round(abs_min,3),'[m^3/s], slope: Trend- Least Squares:', round(model$slope_lm,3))
+    cap=paste('Slope: Trend- Least Squares:', round(model$slope_lm,3))
     plot=ggplot(results)+geom_line(mapping=aes(x=years,y=q_min, group=1, col="a"), show.legend  =TRUE)+labs(title=titl, subtitle=paste("from", year_one, "to", last_year), x="Years" ,  y=expression('Minimum Discharge Value [m'^3*'/s]'), caption=cap)+
       geom_abline(aes(intercept= model$intercept_lm, slope=model$slope_lm,col="c"), show.legend=TRUE)+  scale_color_manual(name = "Legend:   ",
                                                                                                                            labels=c("Minimum values",
