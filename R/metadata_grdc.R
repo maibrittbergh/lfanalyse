@@ -9,8 +9,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc/" )
+#' \dontrun{metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc" )
 #' }
 #'#' @source \url{https://www.bafg.de/GRDC/EN/Home/homepage_node.html}
 #'
