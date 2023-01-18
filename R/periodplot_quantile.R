@@ -23,7 +23,8 @@ periodplot_quantile= function (data, station , quantile, year, graph=T){
   mindate=grep(min,data[,1])
   maxdate=grep(max,data[,1])
   Val=data[,2]
-  U=quantile(Val, probs=quantile)
+
+  U=quantile(Val, probs=quantile, na.rm=T)
   datayear=data[mindate:maxdate,]
   valyear=datayear[,2]
   le=length(mindate:maxdate)

@@ -14,7 +14,7 @@ Qmin_trend(data, station, mod = 1)
 \item{mod}{numeric; possible input: 1,2,3. default value: 1; output of both: \link[zyp]{zyp.trend.vector}, \link[stats]{lm}. Defines the way to calculate intercept and slope. For mod=2  \link[zyp]{zyp.trend.vector} with PreWhitening by "yuepilon-method" is used. Sen-Slope-Approach used to define direction of the trend and the significance is  determined by Kendall's P-Value computed for the final detrendet time series. For mod=3: \link[stats]{lm} with a least squares approach is used.}
 }
 \description{
-Trend of Annual Discharge Minimum Values since begin of Measurements
+A trend is calculated for the annual/seasonal minimum values values using Sen's Slope Estimator and linear regression. The result can be output in the form of a graph or in the form of a list.
 }
 \examples{
 \dontrun{ Qmin_trend(data, "COCHEM")}
