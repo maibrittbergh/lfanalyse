@@ -5,7 +5,7 @@
 #'
 #' @description Desciptive statistics. Time series of discharge at specific station. Including all discharge measurements.
 #'
-#' @param data list; Contains all stations that the discharge analysis should consider. List can be created by \link[dischanalyst]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.
+#' @param data list; Contains all stations that the discharge analysis should consider. List can be created by \link[lfanalyse]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.
 #' @param station character; Name of the station e.g. "COCHEM" - must be named equally like list entry in data.
 #' @param pettitt logical; (default=F); Pettitt-Test. If TRUE : non-parametric test applied on discharge measurements. Tests for a "shift in the central tendency of a time series" (source:\link[trend]{pettitt.test} ).
 #'

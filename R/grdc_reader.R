@@ -3,7 +3,7 @@
 #'@description Function returns list. It may take some time to load the GRDC-List, depending on the amount of stations within the metadataset.
 #'
 #'
-#' @param metadata Data Frame; Overview of GRDC-Dataset.  The metadata can be created by \link[dischanalyst]{metadata_grdc} function.
+#' @param metadata Data Frame; Overview of GRDC-Dataset.  The metadata can be created by \link[lfanalyse]{metadata_grdc} function.
 #' @param path character; Pathway to local grdc data folder.
 #'
 #' @return Grdc List. Each entry contains discharge measurements as well as the corresponding date of a specific station. The number of the displayed stations depends on the rownumber of the metadataset.

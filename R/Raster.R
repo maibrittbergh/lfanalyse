@@ -3,7 +3,7 @@
 #' @description Function displays discharge Values at a station. Rasterplot covers entire time series
 #'
 
-#' @param data list; Contains all stations that the discharge analysis should consider. List can be created by \link[dischanalyst]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.
+#' @param data list; Contains all stations that the discharge analysis should consider. List can be created by \link[lfanalyse]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.
 #' @param station character; Name of the station e.g. "COCHEM" - must be named equally like list entry in data.
 #'@import ggplot2
 #' @return Graphic ; Function visualizes discharge time series as a rasterplot.
@@ -98,6 +98,7 @@ subtitl
 plot=ggplot(dataset, aes(chr, dates )) +
   geom_raster(aes(fill = Value)) + scale_fill_viridis_c(option = "D")+scale_x_discrete(limit=c("Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"))+ xlab("Month")+ylab("Year")+
   labs(fill=expression('Discharge Value[m'^3*'/s]'), title = titl, subtitle=subtitl)
+
 
 return(plot)
 }
