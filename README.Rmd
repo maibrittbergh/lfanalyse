@@ -24,11 +24,39 @@ devtools::install_github("maibrittbergh/lfanalyse")
 ## Structure
 
 ### 1. Functions to load and structure the dataset 
+
+
+
+
 ### 2. Functions for the descriptive statistical analysis 
 
 
+
+![Seasonplot](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/Seasonplot){width=50%}
+
+
+
+
 ### 3. Functions for a threshold based low flow analysis (quantile based/numerical)
+
+
+
+
+
+![Threshold based analysis](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/threshold_based_quantile){width=50%}
+
+
+
+
 ### 4. Functions to determine discharge trends 
+
+
+
+![Trendplot](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/trendplot){width=50%}
+
+
+
+
 
 ## Results 
 

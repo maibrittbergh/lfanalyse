@@ -34,9 +34,28 @@ and analyzed with the help of *lfanalyse*.
 
 ### 2. Functions for the descriptive statistical analysis
 
+<figure>
+<img src="/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/Seasonplot"
+style="width:50.0%" alt="Seasonplot" />
+<figcaption aria-hidden="true">Seasonplot</figcaption>
+</figure>
+
 ### 3. Functions for a threshold based low flow analysis (quantile based/numerical)
 
+<figure>
+<img
+src="/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/threshold_based_quantile"
+style="width:50.0%" alt="Threshold based analysis" />
+<figcaption aria-hidden="true">Threshold based analysis</figcaption>
+</figure>
+
 ### 4. Functions to determine discharge trends
+
+<figure>
+<img src="/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/trendplot"
+style="width:50.0%" alt="Trendplot" />
+<figcaption aria-hidden="true">Trendplot</figcaption>
+</figure>
 
 ## Results
 
