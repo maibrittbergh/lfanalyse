@@ -99,6 +99,7 @@ plot=ggplot(dataset, aes(chr, dates )) +
   geom_raster(aes(fill = Value)) + scale_fill_viridis_c(option = "D")+scale_x_discrete(limit=c("Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"))+ xlab("Month")+ylab("Year")+
   labs(fill=expression('Discharge Value[m'^3*'/s]'), title = titl, subtitle=subtitl)
 
+
 return(plot)
 }
 
