@@ -52,16 +52,9 @@ style="width:50.0%" alt="Threshold based analysis" />
 ### 4. Functions to determine discharge trends
 
 <figure>
-<<<<<<< HEAD
 <img src="/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/trendplot"
 style="width:50.0%" alt="Trendplot" />
 <figcaption aria-hidden="true">Trendplot</figcaption>
-=======
-<img
-src="/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/threshold_based_quantile"
-style="width:50.0%" alt="Discharge Trends" />
-<figcaption aria-hidden="true">Discharge Trends</figcaption>
->>>>>>> e51c8249b4110bb2823b90ecbfe457c221bdde2e
 </figure>
 
 ## Results
