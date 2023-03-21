@@ -33,7 +33,10 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
-![Seasonplot](Seasonplot){width=50%}
+
+![Seasonplot](Seasonplot.png){width=50%}
+
+
 
 
 
@@ -44,8 +47,9 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
+![Threshold based analysis](threshold_based_quantile.png){width=50%}
 
-![Threshold based analysis](threshold_based_quantile){width=50%}
+
 
 
 
@@ -55,8 +59,7 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
-![Trendplot](trendplot){width=50%}
-
+![Trendplot](trendplot.png){width=50%}
 
 
 
