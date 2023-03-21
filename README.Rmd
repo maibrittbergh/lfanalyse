@@ -36,9 +36,6 @@ devtools::install_github("maibrittbergh/lfanalyse")
 ![Seasonplot](Seasonplot.png){width=50%}
 
 
-
-
-
 ### 3. Functions for a threshold based low flow analysis (quantile based/numerical)
 
 
@@ -48,12 +45,10 @@ devtools::install_github("maibrittbergh/lfanalyse")
 ![Threshold based analysis](threshold_based_quantile.png){width=50%}
 
 
+
 ### 4. Functions to determine discharge trends 
 
-
-
 ![Trendplot](trendplot.png){width=50%}
-
 
 
 
