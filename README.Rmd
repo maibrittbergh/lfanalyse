@@ -33,10 +33,7 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
-
 ![Seasonplot](Seasonplot.png){width=50%}
-
-
 
 
 
@@ -47,12 +44,8 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
+
 ![Threshold based analysis](threshold_based_quantile.png){width=50%}
-
-
-
-
-
 
 
 ### 4. Functions to determine discharge trends 
