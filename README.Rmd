@@ -31,15 +31,13 @@ devtools::install_github("maibrittbergh/lfanalyse")
 ### 2. Functions for the descriptive statistical analysis 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e51c8249b4110bb2823b90ecbfe457c221bdde2e
-![Seasonplot](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/Seasonplot){width=50%}
+
+![Seasonplot](Seasonplot){width=50%}
 
 
 
-<<<<<<< HEAD
+
 
 ### 3. Functions for a threshold based low flow analysis (quantile based/numerical)
 
@@ -47,30 +45,20 @@ devtools::install_github("maibrittbergh/lfanalyse")
 
 
 
-=======
-### 3. Functions for a threshold based low flow analysis (quantile based/numerical)
-
-
->>>>>>> e51c8249b4110bb2823b90ecbfe457c221bdde2e
-![Threshold based analysis](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/threshold_based_quantile){width=50%}
+![Threshold based analysis](threshold_based_quantile){width=50%}
 
 
 
-<<<<<<< HEAD
+
 
 ### 4. Functions to determine discharge trends 
 
 
 
-![Trendplot](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/trendplot){width=50%}
+![Trendplot](trendplot){width=50%}
 
 
-=======
-### 4. Functions to determine discharge trends 
 
-
-![Discharge Trends](/Users/maibrittberghofer/Desktop/Arbeit/lfanalyse/threshold_based_quantile){width=50%}
->>>>>>> e51c8249b4110bb2823b90ecbfe457c221bdde2e
 
 
 
