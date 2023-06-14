@@ -1,44 +1,48 @@
 #'Metadata for GRDC Dataset
 #'
 #' @description Returns metadataset of GRDC-Dataset for one country. Dataset needs to be saved locally.
-#'
-#' @param Country character; Abbrevation used in GRDC-Dataset for specific country. e.g. "DE" for Germany.
+#'@param country_selection logical; default=T. If T; one country is being selected. If F; all datasets stored in folder that "path" leads to are being loaded.
+#' @param Country character; optional, only if county_selection=T; Abbrevation used in GRDC-Dataset for specific country. e.g. "DE" for Germany.
 #' @param path character; Pathway to local grdc_discharge folder on computer
 #'
 #' @return data.frame; metadata of GRDC-Dataset and a given Country. Metadata contains information about: The GRDC-number, the name of the river, the name of the station, the country, the catchment area, the altitude, the startmonth/startyear of the measurements, the endmonth/endyear of the measurements, the length of the timeseries, the longitude and the latitude.
 #' @export
 #'
 #' @examples
-#' \dontrun{metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc" )
-#' }
+#' \dontrun{metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc" )}
+#' \dontrun{metadata_ww=metadata_grdc(path=path, country_selection=F )}
+#'
 #'#' @source \url{https://www.bafg.de/GRDC/EN/Home/homepage_node.html}
 #'
-metadata_grdc=function(Country, path){
+
+metadata_grdc=function(country_selection=T,Country, path){
 
   files=list.files(path)
+
   l=length(files)
   vec=as.logical(rep(0,l))
 
+  file_Country=files
+  if (country_selection==T){
 
 
 
-  for (i in 1:l){
-    g=c(path,"/" ,files[i])
-    h=paste(g, collapse=" ")
-    h=sub(" / ", "/",h)
-    s=scan(h, what="character", nmax=150)
-    s
-    p=grep("Country", s)
+    for (i in 1:l){
+      g=c(path,"/" ,files[i])
+      h=paste(g, collapse=" ")
+      h=sub(" / ", "/",h)
+      s=scan(h, what="character", nmax=150)
+      s
+      p=grep("Country", s)
 
-    vec[i]=identical(s[p+1],  Country)
+      vec[i]=identical(s[p+1],  Country)
+    }
+
+    COUNTRY=which(vec==TRUE)
+    file_Country=files[COUNTRY]
+
+    # GRDC_NUMBER
   }
-
-  COUNTRY=which(vec==TRUE)
-  file_Country=files[COUNTRY]
-
-  # GRDC_NUMBER
-
-
   no_length=length(file_Country)
   grdc_no=rep(0, no_length)
   for (i in 1:no_length){
@@ -94,19 +98,22 @@ metadata_grdc=function(Country, path){
 
   }
 
+
   station=sub("#","", station)
 
 
-  for ( i in 1:no_length){ #Fehler: Leerzeichen
 
-    nch=nchar(station[i])
-    lastdigit=substr(station[i],nch,nch)
-    if (lastdigit==" "){
-      station[i]=substr(station[i], 1, (nch-1))
+  if(country_selection==T){
+    for ( i in 1:no_length){ #Fehler: Leerzeichen
+
+      nch=nchar(station[i])
+      lastdigit=substr(station[i],nch,nch)
+      if (lastdigit==" "){
+        station[i]=substr(station[i], 1, (nch-1))
+      }
     }
+
   }
-
-
 
 
 
@@ -303,3 +310,4 @@ metadata_grdc=function(Country, path){
 
 
 }
+

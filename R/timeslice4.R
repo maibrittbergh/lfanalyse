@@ -87,7 +87,7 @@ timeslice4=function(data, station, min1, max1, min2, max2, min3, max3, min4, max
                   # custom outliers
                   outlier.colour="red",
                   outlier.fill="red",
-                  outlier.size=3) +ggtitle(titl, subtitle=subtitl)+xlab("Timespan [years]")+ylab(expression("Discharge [" ~ m^3/s *"]"))+ scale_fill_brewer(palette="BuPu")
+                  outlier.size=3) +ggtitle(titl, subtitle=subtitl)+xlab("Timespan [years]")+ylab(expression("Discharge [" ~ m^3/s *"]"))+ scale_fill_brewer(palette="BuPu")+  stat_summary(fun.y=mean, geom="point", shape=20, size=14, color="red", fill="red")
 
   return(plot)
 
