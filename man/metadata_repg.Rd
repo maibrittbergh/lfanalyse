@@ -7,7 +7,7 @@
 metadata_repg(metadata, mark = F)
 }
 \arguments{
-\item{metadata}{"matrix" "array" ;  Metadata of grdc_dataset. Can be created by \link[dischanalyst]{metadata_grdc} function.}
+\item{metadata}{"matrix" "array" ;  Metadata of grdc_dataset. Can be created by \link[lfanalyse]{metadata_grdc} function.}
 
 \item{mark}{logical; default=F; if FALSE: Function returns new, metadata data.frame containing representative stations only. If TRUE: function returns same metadata data.frame (of GRDC- Dataset) and adds a new column that identifies whether a station is representative (T) or not (F).}
 }

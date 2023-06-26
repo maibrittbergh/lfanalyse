@@ -7,7 +7,7 @@
 seasonpl(data, station, Startyear, Endyear, month_start, month_end)
 }
 \arguments{
-\item{data}{list; River from GRDC - dataset. Output of \link[dischanalyst]{grdc_readr}. Type: list; list entries: measurement stations. For every Station: Date since begin of Measurements (as character) and Value (as numeric).}
+\item{data}{list; River from GRDC - dataset. Output of \link[lfanalyse]{grdc_readr}. Type: list; list entries: measurement stations. For every Station: Date since begin of Measurements (as character) and Value (as numeric).}
 
 \item{station}{character; Must equal name of station in data.}
 

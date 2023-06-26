@@ -7,7 +7,7 @@
 NMxQ_trend(data, station, x, seasonal = "Y", graphic = T)
 }
 \arguments{
-\item{data}{list; Contains all stations that the discharge analysis should consider. List can be created by \link[dischanalyst]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.}
+\item{data}{list; Contains all stations that the discharge analysis should consider. List can be created by \link[lfanalyse]{grdc_list}. Each entry of the list contains the existing discharge measurements (as numeric) and the corresponding dates (as character) for the station.}
 
 \item{station}{character; Name of the Station e.g. "COCHEM" - must be named equally like list entry in data.}
 
@@ -28,7 +28,7 @@ Graphic/ list:
 }
 }
 \description{
-Function calculates for every year within measurements NMxQ Value (Description: \link[dischanalyst]{NMxQ}). Afterwards, a trend is calculated for the annual NM_xQ values using Sen's Slope Estimator and linear regression. The result can be output in the form of a graph or in the form of a list.
+Function calculates for every year within measurements NMxQ Value (Description: \link[lfanalyse]{NMxQ}). Afterwards, a trend is calculated for the annual NM_xQ values using Sen's Slope Estimator and linear regression. The result can be output in the form of a graph or in the form of a list.
 }
 \examples{
  \dontrun{

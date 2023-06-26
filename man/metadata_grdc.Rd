@@ -4,10 +4,12 @@
 \alias{metadata_grdc}
 \title{Metadata for GRDC Dataset}
 \usage{
-metadata_grdc(Country, path)
+metadata_grdc(country_selection = T, Country, path)
 }
 \arguments{
-\item{Country}{character; Abbrevation used in GRDC-Dataset for specific country. e.g. "DE" for Germany.}
+\item{country_selection}{logical; default=T. If T; one country is being selected. If F; all datasets stored in folder that "path" leads to are being loaded.}
+
+\item{Country}{character; optional, only if county_selection=T; Abbrevation used in GRDC-Dataset for specific country. e.g. "DE" for Germany.}
 
 \item{path}{character; Pathway to local grdc_discharge folder on computer}
 }
@@ -18,8 +20,9 @@ data.frame; metadata of GRDC-Dataset and a given Country. Metadata contains info
 Returns metadataset of GRDC-Dataset for one country. Dataset needs to be saved locally.
 }
 \examples{
-\dontrun{metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc" )
-}
+\dontrun{metadata_germany=metadata_grdc("DE","/Users/username/Desktop/folderone/datafolder/grdc_03_2021/grdc_disc" )}
+\dontrun{metadata_ww=metadata_grdc(path=path, country_selection=F )}
+
 #' @source \url{https://www.bafg.de/GRDC/EN/Home/homepage_node.html}
 
 }

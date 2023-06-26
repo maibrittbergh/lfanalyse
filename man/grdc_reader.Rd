@@ -7,7 +7,7 @@
 grdc_reader(metadata, path)
 }
 \arguments{
-\item{metadata}{Data Frame; Overview of GRDC-Dataset.  The metadata can be created by \link[dischanalyst]{metadata_grdc} function.}
+\item{metadata}{Data Frame; Overview of GRDC-Dataset.  The metadata can be created by \link[lfanalyse]{metadata_grdc} function.}
 
 \item{path}{character; Pathway to local grdc data folder.}
 }
