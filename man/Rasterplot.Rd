@@ -19,4 +19,5 @@ Function displays discharge Values at a station. Rasterplot covers entire time s
 }
 \examples{
 \dontrun{ Rasterplot("COCHEM", data )}
+
 }

@@ -9,6 +9,7 @@
 #'
 #' @return Graph/List. Visualizing/ characterizing Low Flow Period. Threshold based. Returns characteristics of a low flow period: the sum of all days under the given threshold, the volume of the deficite, the length of the longest low flow period within the given year.
 #' @import ggplot2
+#' @import ggpubr
 #' @export
 #'
 #' @examples
