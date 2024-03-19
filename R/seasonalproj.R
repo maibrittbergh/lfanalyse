@@ -12,7 +12,6 @@
 #'
 #' @return seasonal plot with monthly resolutio
 #' @import ggplot2
-#' @import ggpubr
 #' @export
 #'
 #' @examples \dontrun{pl=seasonalproj(rivernames, sel_names , mod_data)}
